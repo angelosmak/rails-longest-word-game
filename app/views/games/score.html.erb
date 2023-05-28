@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<% if @found && @include %>
+  <p>Congratulations! <strong><%= @word %></strong> is an English word.</p>
+<% elsif @found %>
+  <p>Sorry, but <strong><%= @word %></strong> can't be built out of <%= @letters.join(' ') %>.</p>
+<% else %>
+  <p>Sorry, but <strong><%= @word %></strong> doesn't seem to be an English word...</p>
+<% end %>
+<%= link_to "Play again!", "/" %>
